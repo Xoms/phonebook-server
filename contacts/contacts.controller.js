@@ -25,9 +25,7 @@ class ContactController {
         } = req;
         
          try {            
-            const contact = await Contact.findById(contactId);
-            console.log(contact);
-           
+            const contact = await Contact.findById(contactId);           
             
             if (!contact) {
                 return res.status(404).json({ "message":"Not found" });
@@ -81,7 +79,8 @@ class ContactController {
         } = req;
 
         try {
-            const data = {...body, avatarURL}
+            const data = { ...body };
+            avatarURL && (data.avatarURL = avatarURL);
             const updatedContact = await Contact.findByIdAndUpdate(contactId, data, {
                 new: true,
             });
