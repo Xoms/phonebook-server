@@ -1,7 +1,7 @@
 {
-  "name": "goit-nodejs",
+  "name": "phonebook-server",
   "version": "1.0.0",
-  "description": "NodeJs homework GoIt",
+  "description": "Phonebook",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js localhost 8080",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xoms/GoIt-NodeJs.git"
+    "url": "git+https://github.com/Xoms/phonebook-server.git"
   },
   "keywords": [
     "NodeJs"
@@ -18,9 +18,9 @@
   "author": "Oleg Shablii",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Xoms/GoIt-NodeJs/issues"
+    "url": "https://github.com/Xoms/phonebook-server/issues"
   },
-  "homepage": "https://github.com/Xoms/GoIt-NodeJs#readme",
+  "homepage": "https://github.com/Xoms/phonebook-server#readme",
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
