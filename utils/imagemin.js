@@ -18,6 +18,10 @@ cloudinary.config({
 
 async function minifyImages(req, res, next) {
     const { file } = req;
+    
+    if (!file) {
+        return next();
+    }
 
     try {
         const files = await imagemin([`tmp/${file.filename}`], {

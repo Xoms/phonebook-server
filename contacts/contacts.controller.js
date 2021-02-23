@@ -45,7 +45,8 @@ class ContactController {
         const { body, avatarURL } = req;
         
         try {
-            const data = {...body, avatarURL}
+            const data = { ...body };
+            avatarURL && (data.avatarURL = avatarURL);
             const createdContact = await Contact.create(data);
 
             res.status(201).json(createdContact);
